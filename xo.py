@@ -147,7 +147,14 @@ def play_a_new_game():
         move = input("BLORP. YOUR MOVE: ")
 
         # If user enters an illegal move.
-        if int(move) not in board:
+        try:
+            if int(move) not in board:
+                print("")
+                print("INVALID MOVE. BLAP.")
+
+                print("")
+                continue
+        except:
             print("")
             print("INVALID MOVE. BLAP.")
 
